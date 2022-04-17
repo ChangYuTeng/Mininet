@@ -145,17 +145,8 @@ if '__main__'==__name__:
   CLI(net)
   net.stop()
 ```
-### 範例五-傳送封包前arp運作過程
-![](0307-5.png)
 
-* h1開wireshark觀察
-![](w4-5-2.png)
-* h2開wireshark觀察
-![](w4-5-3.png)
-* h3開wireshark觀察
-![](w4-5-4.png)
-
-### 範例六-arp poisoning
+### 範例五-arp poisoning
 * 安裝dsniff
 ```
 # apt install dsniff
