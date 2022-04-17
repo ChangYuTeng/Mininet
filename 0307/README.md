@@ -106,53 +106,6 @@ h1> routw -n
 h1> ip route show
 ```
 
-### 作業一-實現h1 h2通訊
-![](0307-3.png)
-
-
-```
-#!/usr/bin/python
-
-from mininet.cli import CLI
-from mininet.net import Mininet
-from mininet.link import Link,TCLink,Intf
-
-if '__main__'==__name__:
-  net=Mininet(link=TCLink)
-  h1=net.addHost('h1')
-  r1=net.addHost('r1')
-  r2=net.addHost('r2')
-  h2=net.addHost('h2')
-  Link(h1,r1)
-  Link(r1,r2)
-  Link(r2,h2)
-  net.build()
-  h1.cmd("ifconfig h1-eth0 0")
-  h1.cmd("ip a a 192.168.1.1/24 brd + dev h1-eth0")
-
-  r1.cmd("ifconfig r1-eth0 0")
-  r1.cmd("ip a a 192.168.1.2/24 brd + dev r1-eth0")
-  r1.cmd("ifconfig r1-eth1 0")
-  r1.cmd("ip a a 192.168.2.2/24 brd + dev r1-eth1")
-
-  r2.cmd("ifconfig r2-eth0 0")
-  r2.cmd("ip a a 192.168.2.1/24 brd + dev r2-eth0")
-  r2.cmd("ifconfig r2-eth1 0")
-  r2.cmd("ip a a 192.168.3.1/24 brd + dev r2-eth1")
-
-  h2.cmd("ifconfig h2-eth0 0")
-  h2.cmd("ip a a 192.168.3.2/24 brd + dev h2-eth0")
-
-  h1.cmd("ip route add default via 192.168.1.2")
-  r2.cmd("ip route add default via 192.168.2.2")
-  r1.cmd("ip route add default via 192.168.2.1")
-  h2.cmd("ip route add default via 192.168.3.1")
-
-  r1.cmd("echo 1 > /proc/sys/net/ipv4/ip_forward")
-  r2.cmd("echo 1 > /proc/sys/net/ipv4/ip_forward")
-  CLI(net)
-  net.stop()
-```
 ### 範例四-透過交換機通訊
 ![](0307-4.png)
 
@@ -224,6 +177,54 @@ h3> arpspoof -i h3-eth0 -t 10.0.0.2 10.0.0.1
 ```
 h1> arp -s 10.0.0.2 00:00:00:00:00:02
 h2> arp -s 10.0.0.1 00:00:00:00:00:01
+```
+
+### 作業一-實現h1 h2通訊
+![](0307-3.png)
+
+
+```
+#!/usr/bin/python
+
+from mininet.cli import CLI
+from mininet.net import Mininet
+from mininet.link import Link,TCLink,Intf
+
+if '__main__'==__name__:
+  net=Mininet(link=TCLink)
+  h1=net.addHost('h1')
+  r1=net.addHost('r1')
+  r2=net.addHost('r2')
+  h2=net.addHost('h2')
+  Link(h1,r1)
+  Link(r1,r2)
+  Link(r2,h2)
+  net.build()
+  h1.cmd("ifconfig h1-eth0 0")
+  h1.cmd("ip a a 192.168.1.1/24 brd + dev h1-eth0")
+
+  r1.cmd("ifconfig r1-eth0 0")
+  r1.cmd("ip a a 192.168.1.2/24 brd + dev r1-eth0")
+  r1.cmd("ifconfig r1-eth1 0")
+  r1.cmd("ip a a 192.168.2.2/24 brd + dev r1-eth1")
+
+  r2.cmd("ifconfig r2-eth0 0")
+  r2.cmd("ip a a 192.168.2.1/24 brd + dev r2-eth0")
+  r2.cmd("ifconfig r2-eth1 0")
+  r2.cmd("ip a a 192.168.3.1/24 brd + dev r2-eth1")
+
+  h2.cmd("ifconfig h2-eth0 0")
+  h2.cmd("ip a a 192.168.3.2/24 brd + dev h2-eth0")
+
+  h1.cmd("ip route add default via 192.168.1.2")
+  r2.cmd("ip route add default via 192.168.2.2")
+  r1.cmd("ip route add default via 192.168.2.1")
+  h2.cmd("ip route add default via 192.168.3.1")
+
+  r1.cmd("echo 1 > /proc/sys/net/ipv4/ip_forward")
+  r2.cmd("echo 1 > /proc/sys/net/ipv4/ip_forward")
+  CLI(net)
+  net.stop()
 ```
 
 ### 作業二
