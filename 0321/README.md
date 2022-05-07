@@ -194,7 +194,7 @@ h1> iperf -c 192.168.2.1 -t 1000
 # make menuconfig
 # make  ##更改完後重新make
 ``` 
-![](03214.jpg)
+![](03214.g)
 
 ## vlan應用
 ### 範例一
