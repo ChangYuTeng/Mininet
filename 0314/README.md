@@ -236,38 +236,38 @@ if '__main__'==__name__:
 * 指令
 ```
 # ./4.py
-mininet> xterm h1 h2 h3
+mininet> xterm h1 h2 h3 h3
 h3> wireshark
-h1> ping 10.0.0.2
+h1> ping 192.168.10.2
 h3> ettercap -G
 ```
 1. 打勾後先掃描連接的主機
 
-![](w5-8.png)
+![](0314-9.png)
 
 2. 查看host lists，並設定攻擊目標
 
-![](w5-9.png)
+![](0314-10.png)
 
 3. 開始arp poisoning
 
-![](w5-10.png)
+![](0314-8.jpg)
 
 ### 範例二-透過欺騙交換機來竊取封包-port stealing(若是先設好靜態arp也無效)
 
 * 指令
 ```
 # ./4.py
-mininet> xterm h1 h2 h3
+mininet> xterm h1 h2 h3 h3
 h3> wireshark
 h1> ping 10.0.0.2
 h3> ettercap -G
 ```
 1. 執行port stealing
 
-![](w5-11.png)
+![](0314-10.png)
 
 2. 執行結果
 
-![](w5-12.png)
+![](0314-9.jpg)
 
