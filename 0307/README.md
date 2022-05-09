@@ -25,7 +25,7 @@ if '__main__'==__name__:
 
   * 執行1.py
   ```
-  # chomod +x 1.py
+  # chmod +x 1.py
   # ./1.py
   mininet> xterm h1 h2  #開出h1 h2終端
 
@@ -33,13 +33,13 @@ if '__main__'==__name__:
   h1> ping 10.0.0.2
   h2> ping 10.0.0.1
 
-  #如何重新配置IP
+  #重新配置IP
   h1> ifconfig h1-eth0 0
   h1> ip addr add 192.168.1.1/24 brd + dev h1-eth0
   h2> ifconfig h2-eth0 0
   h2> ip a a 192.168.1.1/24 brd + dev h1-eth0
   ```
-### 範例二-將更改IP的指令直接寫在腳本中
+### 範例二-利用腳本更改IP
 
   * 2.py
   ```
@@ -63,7 +63,7 @@ if '__main__'==__name__:
   net.stop()
   ```
 
-### 範例三-創建三台機器，不同網域實現互ping
+### 範例三-不同網域互ping
 ![](0307-2.png)
 
 * 3.py
@@ -106,7 +106,7 @@ h1> routw -n
 h1> ip route show
 ```
 
-### 範例四-透過交換機通訊
+### 範例四-透過通訊
 ![](0307-4.png)
 
 * 4.py
@@ -149,7 +149,7 @@ if '__main__'==__name__:
 ### 範例五-arp poisoning
 * 安裝dsniff
 ```
-# apt install dsniff
+apt install dsniff
 ``` 
 
 * 攻擊流程圖
@@ -170,7 +170,7 @@ h1> arp -s 10.0.0.2 00:00:00:00:00:02
 h2> arp -s 10.0.0.1 00:00:00:00:00:01
 ```
 
-### 作業一-實現h1 h2通訊
+### 作業一
 ![](0307-3.png)
 
 
