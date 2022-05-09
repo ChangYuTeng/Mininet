@@ -221,7 +221,7 @@ gnuplot
 gnuplot> plot "2-0" with linespoints, "2-1" with linespoints, "2-3" with linespoints
 ```
 
-![](w7-2.png)
+![](03282.jpg)
 
 ### 範例四-比較udp及rdp傳輸的不同
 * 執行指令
