@@ -1,6 +1,6 @@
 # 0328 第七週筆記
 
-## FFMPEG實驗
+## FFMPEG
 * 安裝指令
 ```
 apt install ffmpeg
@@ -17,7 +17,7 @@ ffmpeg -i foreman_cif.y4m foreman_cif.yuv  #yuv:以亮度色度來儲存影片
 ffmpeg -f rawvideo -s:v 352x288 -r 30 -i foreman_cif.yuv -c:v libx264 -qp 30 -g 12 -bf 2 -f mpeg foreman.mp4
 ffmpeg -f rawvideo -s:v 352x288 -r 30 -i foreman_cif.yuv -c:v libx264 -qp 10 -g 12 -bf 2 -f mpeg foreman2.mp4
 
-#用肉眼比較兩者影片的解析度差異
+#比較兩者影片的解析度差異
 ffplay foreman.mp4
 ffplay foreman2.mp4
 ```
@@ -138,7 +138,7 @@ ffmpeg -i foreman2.mp4 2.yuv
 gnuplot
 gnuplot> plot "psnr1" with linespoints, "psnr2" with linespoints
 ```
-### 範例二-更改遺失率觀察視訊串流的丟失情形
+### 範例二-更改loss觀察視訊串流的丟失情形
 * 3-1.py
 ```
 #!/usr/bin/python
