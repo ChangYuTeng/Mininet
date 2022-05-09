@@ -211,7 +211,7 @@ h2> ./psnr 352 288 420 foreman_cif.yuv 2-1.yuv > 2-1
 #loss:3
 ./3-1.py
 mininet> xterm h1 h2
-h2> ffmpeg -i udp://192.168.2.1:1234 -c copy 1-3.ts
+h2> ffmpeg -i udp://192.168.2.1:1234 -c copy 2-3.ts
 h1> ffmpeg -re -i foreman2.mp4 -c copy -f mpegts udp://192.168.2.1:1234
 h2> ffmpeg -i 2-3.ts 2-3.yuv
 h2> ./psnr 352 288 420 foreman_cif.yuv 2-3.yuv > 2-3
