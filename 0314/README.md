@@ -1,10 +1,10 @@
 # 0314 第五週筆記
 
-## 利用圖形化的工具架構網路
+## 利用miniedit架構網路
 ### 範例一
 ```
-# cd mininet/examples
-# ./miniedit.py
+cd mininet/examples
+./miniedit.py
 ```
 
 ![](0314-1.jpg)
@@ -14,7 +14,7 @@
 ## 效能量測工具iperf
 * 安裝iperf
 ```
-# apt install iperf
+apt install iperf
 ```
 
 ### 範例一
@@ -69,7 +69,7 @@ h1> iperf -c 192.168.2.1 -t 10  #-t 10:傳送10秒，若未指定以TCP傳送
 ```
 ![](0314-3.jpg)
 
-* 透過不同埠號來監測限制後的速度
+* 透過埠號監測速度
 ```
 # ./2.py
 mininet> xterm h1 h2 h1 h2
@@ -181,15 +181,15 @@ replot
 
 ### 安裝ettercap
 ```
-# apt install cmake -y
-# apt-get install debhelper bison check cmake flex ghostscript libbsd-dev libcurl4-openssl-dev libgeoip-dev libltdl-dev libluajit-5.1-dev libncurses5-dev libnet1-dev libpcap-dev libpcre3-dev libssl-dev libgtk-3-dev libgtk2.0-dev -y
-# wget https://github.com/Ettercap/ettercap/archive/v0.8.3.1.tar.gz
-# tar vfxz v0.8.3.1.tar.gz
-# cd ettercap-0.8.3.1/
-# mkdir build
-# cd build
-# cmake ../
-# make install
+apt install cmake -y
+apt-get install debhelper bison check cmake flex ghostscript libbsd-dev libcurl4-openssl-dev libgeoip-dev libltdl-dev libluajit-5.1-dev libncurses5-dev libnet1-dev libpcap-dev libpcre3-dev libssl-dev libgtk-3-dev libgtk2.0-dev -y
+wget https://github.com/Ettercap/ettercap/archive/v0.8.3.1.tar.gz
+tar vfxz v0.8.3.1.tar.gz
+cd ettercap-0.8.3.1/
+mkdir build
+cd build
+cmake ../
+make install
 ```
 ### 範例一-arp poisoning(可透過綁定靜態arp防範)
 
@@ -249,11 +249,11 @@ h3> ettercap -G
 
 ![](0314-10.png)
 
-3. 開始arp poisoning
+3. arp poisoning
 
 ![](0314-8.jpg)
 
-### 範例二-透過欺騙交換機來竊取封包-port stealing(若是先設好靜態arp也無效)
+### 範例二-透過欺騙switch來竊取封包-port stealing(若是先設好靜態arp也無效)
 
 * 指令
 ```
