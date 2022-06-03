@@ -102,14 +102,14 @@ root@581e06e92492:/# echo "hi" > hi.htm
 ```
 
 ### 範例四-製作一個新docker鏡像
-* 先查看docker
+* 新開一個terminal並查看docker
 
 ![](w9-3.png)
 
 * 執行指令
 ```
-# docker commit 32c ubuntu:1.0
-# docker rm -f 32c
+# docker commit 581 ubuntu:1.0
+# docker rm -f 581
 # docker images  ##查看新增後的鏡像
 ```
 
