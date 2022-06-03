@@ -8,7 +8,6 @@
 # cd /home/user/containernet/examples
 # python3 dockerhosts.py
 containernet> h1 ping -c 3 d1
-
 # docker images
 ```
 檢查是否有此鏡像
