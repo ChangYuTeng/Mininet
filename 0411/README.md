@@ -297,7 +297,6 @@ if __name__ == '__main__':
 ```
 * 執行指令
 ```
-# cd /home/user/server-test/test-sshtunnel
 # python3 1.py
 containernet> xterm h1 h1
 #(2) docker ps
