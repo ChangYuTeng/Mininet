@@ -78,7 +78,7 @@ root@d1:/# ping 10.0.0.251
 ### 範例二-下載ssh伺服器
 * 執行指令
 ```
-# docker run -it ubuntu:trusty bash
+docker run -it ubuntu:trusty bash
 root@32ca18d1c6b0:/# apt update
 root@32ca18d1c6b0:/# apt install openssh-server apache2 vim -y
 root@32ca18d1c6b0:/# vim /etc/ssh/sshd_config  ##root遠端登入預設是關閉的
