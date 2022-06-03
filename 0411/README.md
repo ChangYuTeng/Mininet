@@ -12,7 +12,7 @@ containernet> h1 ping -c 3 d1
 ```
 檢查是否有此鏡像
 
-![](w9-1.png)
+![](04114.jpg)
 
 ### 範例一-與docker互ping測試
 * dockerhost1.py
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     topology()
 ```
 
-![](w9-2.png)
+![](04111.png)
 * 執行指令
 ```
 # cd /home/user/containernet/examples
@@ -104,7 +104,7 @@ root@581e06e92492:/# echo "hi" > hi.htm
 ### 範例四-製作一個新docker鏡像
 * 新開一個terminal並查看docker
 
-![](w9-3.png)
+![](04115.jpg)
 
 * 執行指令
 ```
@@ -113,7 +113,7 @@ root@581e06e92492:/# echo "hi" > hi.htm
 # docker images  ##查看新增後的鏡像
 ```
 
-![](w9-4.png)
+![](04116.jpg)
 
 * dockerhost1.py-變更到新的鏡像
 ```
@@ -179,7 +179,7 @@ h1> curl 10.0.0.251/hi.htm
 ### 範例五-透過frp server讓外網可以連到內網的網頁伺服器
 * 運作方式
 
-![](w9-5.png)
+![](04112.png)
 
 * test.py
 ```
@@ -306,13 +306,10 @@ root@d1:/# /etc/init.d/apache2 start
 h1(1)> wireshark
 h1(2)> curl 192.168.0.2/hi.htm
 ```
-* 傳送過程仍可以輕鬆辨識部分內容
-
-![](w9-6.png)
 
 * 使用SSH Tunnel來傳輸
 
-![](w9-7.png)
+![](04113.png)
 * 執行指令
 ```
 h1> ssh -Nf -L 192.168.0.1:5555:192.168.0.2:80 root@192.168.0.2
