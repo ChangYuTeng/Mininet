@@ -3,7 +3,7 @@
 ## 期中範例解答
 ### vlan
 
-![](04251-png)
+![](04251.png)
 
 * test-vlan.py
 ```
@@ -75,7 +75,7 @@ if '__main__' == __name__:
 ## SSH Tunnel 的應用
 ### 範例一-透過SSH Tunnel連到外網
 
-![](04252-png)
+![](04252.png)
 
 * lab2.py
 ```
@@ -139,7 +139,7 @@ h1> firefox 127.0.0.1:5555
 
 ### 範例二-從外網連進來remote port forwarding
 
-![](04253-png)
+![](04253.png)
 
 * lab3.py
 ```
