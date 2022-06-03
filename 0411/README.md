@@ -300,7 +300,7 @@ if __name__ == '__main__':
 # python3 1.py
 containernet> xterm h1 h1
 #(2) docker ps
-#(2) # docker exec -it mn.d1 bash
+#(2) docker exec -it mn.d1 bash
 root@d1:/# /etc/init.d/ssh start
 root@d1:/# /etc/init.d/apache2 start
 h1(1)> wireshark
