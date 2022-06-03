@@ -79,25 +79,25 @@ root@d1:/# ping 10.0.0.251
 * 執行指令
 ```
 docker run -it ubuntu:trusty bash
-root@32ca18d1c6b0:/# apt update
-root@32ca18d1c6b0:/# apt install openssh-server apache2 vim -y
-root@32ca18d1c6b0:/# vim /etc/ssh/sshd_config  ##root遠端登入預設是關閉的
+root@581e06e92492:/# apt update
+root@581e06e92492:/# apt install openssh-server apache2 vim -y
+root@581e06e92492:/# vim /etc/ssh/sshd_config  ##root遠端登入預設是關閉的
 
 ##在vim中按a編輯將PermitRootLogin設為yes，並按:wq儲存離開
 
-root@32ca18d1c6b0:/# /etc/init.d/ssh start  ##啟動ssh伺服器
-root@32ca18d1c6b0:/# /etc/init.d/ssh status  ##查看伺服器狀態
-root@32ca18d1c6b0:/# passwd root  ##(ubuntu)
+root@581e06e92492:/# /etc/init.d/ssh start  ##啟動ssh伺服器
+root@581e06e92492:/# /etc/init.d/ssh status  ##查看伺服器狀態
+root@581e06e92492:/# passwd root  ##(ubuntu)
 #2 ssh root@172.17.0.3
 ```
 
 ### 範例三-網頁伺服器
 * 執行指令
 ```
-root@7dd427689aae:/# /etc/init.d/apache2 start  ##啟動ssh伺服器
-root@7dd427689aae:/# /etc/init.d/apache2 status  ##查看伺服器狀態
-root@7dd427689aae:/# cd /var/www/html
-root@7dd427689aae:/# echo "hi" > hi.htm
+root@581e06e92492:/# /etc/init.d/apache2 start  ##啟動ssh伺服器
+root@581e06e92492:/# /etc/init.d/apache2 status  ##查看伺服器狀態
+root@581e06e92492:/# cd /var/www/html
+root@581e06e92492:/# echo "hi" > hi.htm
 #2 curl 172.17.0.3/hi.htm
 ```
 
