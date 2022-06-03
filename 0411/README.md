@@ -94,10 +94,10 @@ root@32ca18d1c6b0:/# passwd root  ##(ubuntu)
 ### 範例三-網頁伺服器
 * 執行指令
 ```
-root@32ca18d1c6b0:/# /etc/init.d/apache2 start  ##啟動ssh伺服器
-root@32ca18d1c6b0:/# /etc/init.d/apache2 status  ##查看伺服器狀態
-root@32ca18d1c6b0:/# cd /var/www/html
-root@32ca18d1c6b0:/# echo "hi" > hi.htm
+root@7dd427689aae:/# /etc/init.d/apache2 start  ##啟動ssh伺服器
+root@7dd427689aae:/# /etc/init.d/apache2 status  ##查看伺服器狀態
+root@7dd427689aae:/# cd /var/www/html
+root@7dd427689aae:/# echo "hi" > hi.htm
 #2 curl 172.17.0.3/hi.htm
 ```
 
