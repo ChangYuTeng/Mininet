@@ -184,5 +184,5 @@ mininet-wifi> sh ovs-ofctl add-flow s1 in_port=2,actions=output:1
 mininet-wifi> sh ovs-ofctl del-flows s1
 ```
 
-![](0502-5.png)
+![](0502-5.jpg)
 
