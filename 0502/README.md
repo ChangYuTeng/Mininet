@@ -4,7 +4,7 @@
 
 ### 範例一-連入內網的主機再透過主機連入不同IP的HTTP Server
 
-![](W12-1.png)
+![](0502-1.png)
 
 * lab4.py
 ```
@@ -77,7 +77,7 @@ root@0ca952464060:/# apt install curl
 ```
 ### 範例二-內網連接到外網的HTTP Server(Dynamic Port Forwarding)
 
-![](W12-2.png)
+![](0502-2.png)
 
 * lab5.py
 ```
@@ -153,12 +153,12 @@ user@ubuntu:~$> firefox
 ```
 Firefox更改設定
 
-![](W12-3.png)
+![](0502-3.jpg)
 
 ## 軟體定義網路
 ### 範例一-基本設置
 
-![](W12-4.png)
+![](0502-4.png)
 
 * 執行指令
 ```
@@ -184,5 +184,5 @@ mininet-wifi> sh ovs-ofctl add-flow s1 in_port=2,actions=output:1
 mininet-wifi> sh ovs-ofctl del-flows s1
 ```
 
-![](W12-5.png)
+![](0502-5.png)
 
