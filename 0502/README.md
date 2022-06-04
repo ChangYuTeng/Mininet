@@ -149,8 +149,9 @@ h1> ssh -Nf -D 127.0.0.1:8080 root@10.0.0.1
 h1> netstat tunlp  ##查看阜號狀態
 root@ubuntu:/home/user# su - user
 user@ubuntu:~$> firefox
-≡>⚙Refrence>Network Settings>Settings...>Manual proxy configuration
+
 ```
+Firefox更改設定
 
 ![](W12-3.png)
 
@@ -171,12 +172,14 @@ mininet-wifi> sh ovs-ofctl dump-flows s1
 ##不用內建控制器的方法1
 # ps -ef | grep controller  ##找到內建控制器PID
 # kill -9 7387
+
 ##不用內建控制器的方法2
 # mn --topo single,2 --controller=remote
 
 ##新增規則
 mininet-wifi> sh ovs-ofctl add-flow s1 in_port=1,actions=output:2
 mininet-wifi> sh ovs-ofctl add-flow s1 in_port=2,actions=output:1
+
 ##刪除規則
 mininet-wifi> sh ovs-ofctl del-flows s1
 ```
