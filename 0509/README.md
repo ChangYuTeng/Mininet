@@ -96,6 +96,7 @@ nox| C
 mininet> sh ovs-ofctl show s1  ##查看詳細資訊
 
 ##透過pox控制器觀察規則如何下
+#2 cd pox
 #2 ./pox.py forwarding.l2_learning
 mininet> h1 ping h2
 
@@ -118,9 +119,6 @@ set_vlan_vid、set_vlan_pcp、strip_vlan | 加入移除vlan標籤
 mod_dl_src、mod_dl_dst | 修改data link source destination
 mod_nw_src、mod_nw_dst、mod_nw_tos | 改變網路層位址(network)
 mod_tp_src、mod_tp_dst | 第四層(Transport Layer)
-
-* 規則說明 
-![](W13-3.png)
 
 * 執行指令
 ```
