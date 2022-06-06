@@ -160,8 +160,6 @@ def launch ():
   log.info("mypox1")
 ```
 
-![](W14-2.png)
-
 * 執行指令
 ```
 # python 3.py
