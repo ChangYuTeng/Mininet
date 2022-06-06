@@ -3,7 +3,7 @@
 ## NAT實作
 ### 範例一
 
-![](W14-1.png)
+![](05165.png)
 
 * 2.py
 ```
@@ -170,7 +170,7 @@ mininet> h1 ping h2
 
 ### 範例二-port forwarding(DNAT)
 
-![](W14-3.png)
+![](05166.png)
 
 * 執行指令
 ```
