@@ -67,8 +67,10 @@ if __name__ == '__main__':
 # python 2.py
 mininet> sh ovs-ofctl add-flow s1 ip,nw_src=192.168.1.1,nw_dst=1.2.3.4,actions=mod_nw_src=1.2.3.5,mod_dl_dst=00:00:00:00:00:02,output:2
 mininet> sh ovs-ofctl add-flow s1 ip,nw_src=1.2.3.4,nw_dst=1.2.3.5,actions=mod_nw_dst=192.168.1.1,mod_dl_dst=00:00:00:00:00:01,output:1
+mininet> h1 ping h2
 
 ```
+![](05161.jpg)
 
 ## SDN
 
@@ -181,6 +183,9 @@ mininet> sh ovs-ofctl add-flow s1 tcp,nw_src=1.2.3.4,nw_dst=1.2.3.5,tp_dst=8888,
 mininet> sh ovs-ofctl add-flow s1 tcp,nw_src=192.168.1.1,nw_dst=1.2.3.4,tp_src=80,action=mod_nw_src:1.2.3.5,mod_dl_dst=00:00:00:00:00:02,mod_tp_src:8888,output:2
 h2> curl 1.2.3.5:8888
 ```
+
+![](05163.jpg)
+
 ### 範例三-防火牆firewall
 目的:h1可以與h2互ping，也可以連接到h2:80，但不能與h2:8080通訊。
 
@@ -199,3 +204,4 @@ h1> curl 1.2.3.4:80  ##成功
 h1> curl 1.2.3.4:8080  ##失敗
 
 ```
+![](05164.jpg)
