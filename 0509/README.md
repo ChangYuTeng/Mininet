@@ -3,7 +3,7 @@
 ## 軟體定義網路
 ### 範例一-使用pox控制器使s1成為hub
 
-![](W13-1.png)
+![](05091.png)
 
 * 執行指令
 ```
@@ -102,7 +102,7 @@ mininet> h1 ping h2
 
 ```
 
-![](W13-2.png)
+![](05092.jpg)
 
 capabilities | 能力
 -----------|--------
@@ -140,7 +140,7 @@ mininet> sh ovs-ofctl add-flow s1 ip,nw_dst=192.168.1.2,action=output:2
 
 ### 範例三-添加規則使h1 h2能互ping
 
-![](W13-4.png)
+![](05093.png)
 
 * test2.py
 ```
@@ -212,7 +212,7 @@ mininet> sh ovs-ofctl add-flow s2 ip,nw_dst=10.0.0.2,action=output:1
 ```
 
 ### 作業一
-![](W13-5.png)
+![](05094.jpg)
 
 * test3.py
 ```
