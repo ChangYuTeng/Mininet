@@ -19,6 +19,8 @@ RuntimeCmd: table_add phy_forward forward 1 => 2  ##手動添加規則
 RuntimeCmd: table_add phy_forward forward 2 => 1  ##手動添加規則
 mininet> h1 ping h2 -c 3  ##成功
 
+![](05301.jpg)
+
 ##額外新增規則方法
 RuntimeCmd: clear_delete phy_forward
 mininet> h1 ping h2 -c 3  ##失敗
@@ -90,6 +92,9 @@ mininet> h2 ifconfig h2-eth0 0
 mininet> h2 ip addr add 10.0.1.2/24 brd + dev h2-eth0
 mininet> h1 ping h2 -c 3
 ```
+
+![](05304.jpg)
+
 * p4app.json(不用改IP的方法)
 ```
 {
@@ -150,3 +155,5 @@ mininet> h1 ping h2 -c 3
 # p4run
 mininet> h1 ping h2 -c 3  ##成功
 ```
+
+![](05305.jpg)
