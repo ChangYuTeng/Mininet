@@ -8,7 +8,7 @@
 
 * 執行指令
 ```
-# cd /home/user/p4-test/1
+# cd p4-test/1
 # p4run
 #2 simple_switch_CLI --thrift-port 9090
 RuntimeCmd: table_dump phy_forward  ##查看規則
