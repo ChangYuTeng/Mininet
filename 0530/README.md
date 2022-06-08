@@ -81,7 +81,7 @@ mininet> h1 ping h2 -c 3  ##成功
 ```
 ##清空執行檔，重新配置
 # cp -r 1 1-a
-# cd /home/user/p4-test/1-a
+# cd 1-a
 # rm basic.json basic.p4i topology.db
 
 # p4run
