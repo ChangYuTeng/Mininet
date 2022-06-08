@@ -81,6 +81,8 @@ h3> iperf -s -i 1 -u
 h1> iperf -c 10.0.0.2 -u -b 1M -t 100
 ```
 
+![](05231.jpg)
+
 ### 範例二-使h1 ping h2時，h1 h3可雙向溝通
 
 ![](05235.png)
@@ -178,6 +180,9 @@ s2> tcpdump -i s2-eth1
 s3> tcpdump -i s3-eth3
 mininet> h1 ping h2
 ```
+
+![](05233.jpg)
+
 ### 範例四-fastfailover
 
 ![](05237.png)
