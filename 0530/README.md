@@ -19,14 +19,15 @@ RuntimeCmd: table_add phy_forward forward 1 => 2  ##手動添加規則
 RuntimeCmd: table_add phy_forward forward 2 => 1  ##手動添加規則
 mininet> h1 ping h2 -c 3  ##成功
 
-![](05301.jpg)
-
 ##額外新增規則方法
 RuntimeCmd: clear_delete phy_forward
 mininet> h1 ping h2 -c 3  ##失敗
 # simple_switch_CLI --thrift-port 9090 < cmd.txt
 mininet> h1 ping h2 -c 3  ##成功
 ```
+
+![](05301.jpg)
+
 ### 範例二
 
 ![](05302.png)
