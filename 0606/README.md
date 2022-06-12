@@ -183,7 +183,6 @@ mininet> h1 ping h2 -c 3  ##成功
 ```
 # cd /home/user/p4-test/3
 # p4run
-
 ```
 
 * 表頭對應
@@ -378,5 +377,4 @@ V1Switch(ParserImpl(), verifyChecksum(), ingress(), egress(), computeChecksum(),
 ```
 table_add ipv4_lpm set_nhop 10.0.2.1/32 => 00:00:0a:00:02:01 2 10.0.2.254
 table_add ipv4_lpm set2h1 10.0.2.254/32 => 00:00:0a:00:01:01 1 10.0.1.1
-
 ```
