@@ -160,8 +160,6 @@ if '__main__' == __name__:
 
 ![](04184.jpg)
 
-![](04185.jpg)
-
 * test3.py
 ```
 #!/usr/bin/python
