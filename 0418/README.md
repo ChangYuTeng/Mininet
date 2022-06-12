@@ -86,7 +86,7 @@ mininet> h1 ping h2
 
 ![](04182.jpg)
 
-## 2. 製作vlan10、vlan20兩個不同通道(未完成)
+## 2. 製作vlan10、vlan20兩個不同通道
 
 ![](04183.jpg)
 
