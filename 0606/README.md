@@ -3,6 +3,7 @@
 ### bash與child process
 
 ![](06061.jpg)
+
 1.a=5;echo $a：在bash中執行，a=5
 2.(a=10;echo $a)：在bash中的子行程執行，a=10，執行後刪除
 3.echo $a：當前bash中a=5
