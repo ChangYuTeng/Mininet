@@ -125,7 +125,7 @@ if '__main__' == __name__:
   s2.cmd("ifconfig s2-eth0 0")
   s2.cmd("ifconfig s2-eth1 0")
   s2.cmd("ifconfig s2-eth2 0")
-  s1.cmd("vconfig add s1-eth2 10")  ##創造兩個邏輯線路(trunk)
+  s1.cmd("vconfig add s1-eth2 10")
   s1.cmd("vconfig add s1-eth2 20")
   s2.cmd("vconfig add s2-eth2 10")
   s2.cmd("vconfig add s2-eth2 20")
